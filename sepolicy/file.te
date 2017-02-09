@@ -10,3 +10,6 @@ type sysfs_fpc_proximity, fs_type, sysfs_type;
 type sysfs_wifi, fs_type, sysfs_type;
 
 type debugfs_power_stats, fs_type, debugfs_type;
+
+type higbrightness_dev, fs_type, sysfs_type;
+
