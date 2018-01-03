@@ -179,8 +179,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0_vendor
 
 # Doze mode
-#PRODUCT_PACKAGES += \
-#    OneplusDoze
+PRODUCT_PACKAGES += \
+    OneplusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -190,7 +190,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
-    fingerprintd
+    fingerprintd \
+    OneplusPocketMode
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
