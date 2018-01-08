@@ -10,7 +10,7 @@
     "branch": "c8.1"
   },
   {
-    "repository": "CandyDevices/proprietary_vendor_oneplus",
+    "repository": "CandyDevices/vendor_oneplus",
     "target_path": "vendor/oneplus",
     "branch": "c8.1"
   }
