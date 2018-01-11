@@ -459,4 +459,11 @@
 
     <!-- Whether device has DASH charging support -->
     <bool name="config_hasDashCharger">true</bool>
+
+    <!-- Controls the WiFi wakeup feature.
+    0 = Not available.
+    1 = Available.
+    -->
+    <integer translatable="false" name="config_wifi_wakeup_available">1</integer>
+
 </resources>
