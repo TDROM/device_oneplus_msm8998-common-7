@@ -13,20 +13,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := \
-
-LOCAL_SHARED_LIBRARIES := \
-    libhidltransport
-
-LOCAL_C_INCLUDES := \
-
-LOCAL_MODULE := android.hidl.base@1.0
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-
-include $(BUILD_SHARED_LIBRARY)
+#include $(CLEAR_VARS)
+#
+#LOCAL_SRC_FILES := \
+#
+#LOCAL_SHARED_LIBRARIES := \
+#    libhidltransport
+#
+#LOCAL_C_INCLUDES := \
+#
+#LOCAL_MODULE := android.hidl.base@1.0
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#
+#include $(BUILD_SHARED_LIBRARY)
 
 
 include $(CLEAR_VARS)
