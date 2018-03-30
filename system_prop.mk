@@ -61,7 +61,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=cherokee \
     ro.bluetooth.a4wp=false \
     ro.bluetooth.emb_wp_mode=true \
-    ro.bluetooth.wipower=true
+    ro.bluetooth.wipower=true \
+    ro.config.bt_sco_vol_steps=30
 
 # Cabl
 PRODUCT_PROPERTY_OVERRIDES += \
