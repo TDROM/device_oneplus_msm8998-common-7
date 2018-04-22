@@ -123,12 +123,7 @@ public class DozeSettings extends PreferenceActivity implements OnPreferenceChan
             return new AlertDialog.Builder(getActivity())
                     .setTitle(R.string.doze_settings_help_title)
                     .setMessage(R.string.doze_settings_help_text)
-                    .setNegativeButton(R.string.dlg_ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    })
+                    .setNegativeButton(R.string.dlg_ok, (dialog, which) -> dialog.cancel())
                     .create();
         }
 
