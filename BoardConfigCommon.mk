@@ -251,6 +251,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # Power
+#TARGET_HIGH_BRIGHTNESS_MODE_PATH := "/sys/devices/virtual/graphics/fb0/hbm"
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_USES_INTERACTION_BOOST := true
 
