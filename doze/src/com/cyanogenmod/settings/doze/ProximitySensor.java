@@ -23,12 +23,17 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class ProximitySensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "ProximitySensor";
 
     private static final int POCKET_DELTA_NS = 1000 * 1000 * 1000;
+    private static final String FPC_FILE = "/sys/devices/soc/soc:fpc_fpc1020/proximity_state";
 
     private SensorManager mSensorManager;
     private Sensor mSensor;
@@ -86,5 +91,23 @@ public class ProximitySensor implements SensorEventListener {
     protected void disable() {
         if (DEBUG) Log.d(TAG, "Disabling");
         mSensorManager.unregisterListener(this, mSensor);
+    }
+
+    private boolean isFileWritable(String fname) {
+        return new File(fname).canWrite();
+    }
+
+    private boolean writeLine(String fname, String value) {
+        try {
+            FileWriter fw = new FileWriter(fname);
+            try {
+                fw.write(value);
+            } finally {
+                fw.close();
+            }
+        } catch (IOException e) {
+            return false;
+        }
+        return true;
     }
 }
