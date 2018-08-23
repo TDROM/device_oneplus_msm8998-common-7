@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.lineageos.pocketmode;
+package org.lineageos.pocketmode;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -24,7 +24,11 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
-import candy.io.CandyFileUtils;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class ProximitySensor implements SensorEventListener {
 
@@ -48,10 +52,10 @@ public class ProximitySensor implements SensorEventListener {
                 mContext.getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
 
-        if (FileUtils.fileExists(CHEESEBURGER_FILE)) {
+        if (fileExists(CHEESEBURGER_FILE)) {
             FPC_FILE = CHEESEBURGER_FILE;
             found = true;
-        } else if (FileUtils.fileExists(DUMPLING_FILE)) {
+        } else if (fileExists(DUMPLING_FILE)) {
             FPC_FILE = DUMPLING_FILE;
             found = true;
         } else {
@@ -75,8 +79,8 @@ public class ProximitySensor implements SensorEventListener {
     }
 
     private void setFPProximityState(boolean isNear) {
-        if (FileUtils.isFileWritable(FPC_FILE)) {
-            FileUtils.writeLine(FPC_FILE, isNear ? "1" : "0");
+        if (isFileWritable(FPC_FILE)) {
+            writeLine(FPC_FILE, isNear ? "1" : "0");
         } else {
             Log.e(TAG, "Proximity state file " + FPC_FILE + " is not writable!");
         }

@@ -24,6 +24,8 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
 
+import com.android.internal.util.candy.FileUtils;
+
 public class PocketModeService extends Service {
     private static final String TAG = "PocketModeService";
     private static final boolean DEBUG = false;
