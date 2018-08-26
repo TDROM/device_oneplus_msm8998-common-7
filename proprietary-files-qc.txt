@@ -767,6 +767,7 @@ vendor/lib64/libOpenCL.so
 vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/libRSDriver_adreno.so
+vendor/lib64/libuiblur.so
 
 # Graphics - DRM - LA.UM.6.4.r1-07400-8x98.0
 vendor/lib/libsdedrm.so|e8b2700c95c94e79412049536c84e2d0b4ce58bd

@@ -132,7 +132,7 @@ PRODUCT_COPY_FILES += \
 #    AntHalService \
 #    com.dsi.ant.antradio_library \
 #    libantradio
-#
+
 #PRODUCT_COPY_FILES += \
 #    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
@@ -188,9 +188,9 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
 
-# Doze
+# Doze mode
 #PRODUCT_PACKAGES += \
-#    OnePlusDoze
+#    OneplusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -375,10 +375,11 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    ims-ext-common \
+    android.hardware.broadcastradio@1.0-impl \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full \
+    ims-ext-common \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -415,10 +416,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
     com.android.future.usb.accessory
-
-# Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2018-05-05
 
 # Vibrator
 PRODUCT_PACKAGES += \
