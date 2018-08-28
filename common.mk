@@ -150,7 +150,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
-    Snap
+    Camera2
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
@@ -189,8 +189,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0_vendor
 
 # Doze
-PRODUCT_PACKAGES += \
-    Doze
+#PRODUCT_PACKAGES += \
+#    Doze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -287,12 +287,12 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus_8998
 
 # LiveDisplay native
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm \
-    vendor.lineage.livedisplay-V1.0-java
-
-PRODUCT_BOOT_JARS += \
-    vendor.lineage.livedisplay-V1.0-java
+#PRODUCT_PACKAGES += \
+#    vendor.candy.livedisplay@1.0-service-sdm \
+#    vendor.candy.livedisplay-V1.0-java
+#
+#PRODUCT_BOOT_JARS += \
+#    vendor.candy.livedisplay-V1.0-java
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -422,7 +422,7 @@ PRODUCT_PACKAGES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2018-07-01
+    ro.candy.build.vendor_security_patch=2018-08-01
 
 # Vibrator
 PRODUCT_PACKAGES += \
