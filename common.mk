@@ -105,7 +105,7 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
+    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml \
@@ -132,7 +132,7 @@ PRODUCT_COPY_FILES += \
 #    AntHalService \
 #    com.dsi.ant.antradio_library \
 #    libantradio
-#
+
 #PRODUCT_COPY_FILES += \
 #    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
@@ -188,9 +188,9 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
 
-# Doze
+# Doze mode
 #PRODUCT_PACKAGES += \
-#    Doze
+#    OneplusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -287,18 +287,13 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus_8998
 
 # LiveDisplay native
-#PRODUCT_PACKAGES += \
-#    vendor.candy.livedisplay@1.0-service-sdm \
-#    vendor.candy.livedisplay-V1.0-java
-#
-#PRODUCT_BOOT_JARS += \
-#    vendor.candy.livedisplay-V1.0-java
+PRODUCT_PACKAGES += \
+    libjni_livedisplay
 
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 PRODUCT_COPY_FILES += \
@@ -379,10 +374,11 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    ims-ext-common \
+    android.hardware.broadcastradio@1.0-impl \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full \
+    ims-ext-common \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
